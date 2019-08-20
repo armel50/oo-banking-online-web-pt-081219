@@ -14,9 +14,7 @@ class Transfer
   end 
   
   def execute_transaction 
-    p @sender 
-    p @receiver
-    p @amount
+  
     if (@sender.valid?) && (@receiver.valid?) && (@status != "complete") && (@amount < @sender.balance)
       past_transaction = self
      
