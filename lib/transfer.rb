@@ -17,7 +17,7 @@ class Transfer
     p @sender 
     p @receiver
     p @amount
-    if (@sender.valid?) && (@receiver.valid?) && @status != "complete" 
+    if (@sender.valid?) && (@receiver.valid?) && (@status != "complete") && (@amount < @sender.balance)
       past_transaction = self
      
       @sender.balance -= @amount
